@@ -1,1 +1,1 @@
-gnicorn paymail.wsgi
+gunicorn paymail.wsgi -D --workers 3 -b 127.0.0.1:8000 --access-logfile log.txt
