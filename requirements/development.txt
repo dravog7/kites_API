@@ -1,0 +1,4 @@
+django
+django-cors-headers
+sendgrid-django
+cryptography==2.1.4

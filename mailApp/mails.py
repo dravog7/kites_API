@@ -1,7 +1,7 @@
 from django.core.mail import send_mail
 from django.core.mail import EmailMultiAlternatives
 
-FROM_EMAIL = "john abraham <dravog77@gmail.com>" #must verify sender id before using
+FROM_EMAIL = "Kites Foundation <info@kitesfoundation.org>" #must verify sender id before using
 
 def sendgrid_mail_error_handler(func):
     def f(*args,**kwargs):
@@ -20,7 +20,7 @@ def send_welcome_mail(to_mail,**kwargs):
         from_email=FROM_EMAIL,
         to=[to_mail],
     )
-    mail.template_id = 'd-4db430adc48f437b8b974a0255350999'
+    mail.template_id = 'd-c40ad5d0f3a24a7e8dc79f8850d3ef12'
     # mail.substitutions = kwargs
     mail.attach_alternative("<p>a</p>", "text/html")
     mail.send()
