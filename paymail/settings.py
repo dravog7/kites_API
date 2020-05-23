@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = Fernet.generate_key()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DJANGO_DEBUG', True)
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -86,7 +86,6 @@ DATABASES = {
     }
 }
 db_from_env = dj_database_url.config(env='DATABASE_URL',conn_max_age=500)
-print(db_from_env)
 DATABASES['default'].update(db_from_env)
 
 # Password validation
