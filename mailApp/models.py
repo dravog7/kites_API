@@ -8,7 +8,7 @@ def validate_phone(value):
 class Registrant(models.Model):
     name = models.CharField(max_length=500)
     email = models.EmailField(unique=True)
-    phone = models.IntegerField(validators=[validate_phone])
+    phone = models.CharField(validators=[validate_phone],max_length=100)
     state = models.CharField(max_length=100)
     district = models.CharField(max_length=100)
     qualification= models.TextField(default='',blank=True)
